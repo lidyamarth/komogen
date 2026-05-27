@@ -522,6 +522,25 @@ with tab5:
     </p>
     </div>""", unsafe_allow_html=True)
 
+    st.markdown("""
+    <div class="card">
+    <h4>👥 Anggota Kelompok</h4>
+    <table style="width:100%;font-size:.87rem;border-collapse:collapse;">
+      <thead>
+        <tr style="border-bottom:2px solid #c8e6c9;">
+          <th style="text-align:left;padding:6px 8px;color:#1b5e20;">Nama</th>
+          <th style="text-align:left;padding:6px 8px;color:#1b5e20;">NIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #e0f2e9;"><td style="padding:6px 8px;">Desati Dinda Saraswati</td><td style="padding:6px 8px;">18223110</td></tr>
+        <tr style="border-bottom:1px solid #e0f2e9;"><td style="padding:6px 8px;">Anggita Najmi Layali</td><td style="padding:6px 8px;">18223122</td></tr>
+        <tr style="border-bottom:1px solid #e0f2e9;"><td style="padding:6px 8px;">Nakeisha Valya Shakila</td><td style="padding:6px 8px;">18223133</td></tr>
+        <tr><td style="padding:6px 8px;">Lidya Marthadilla</td><td style="padding:6px 8px;">18223134</td></tr>
+      </tbody>
+    </table>
+    </div>""", unsafe_allow_html=True)
+    
     with st.expander("📦 Cara Menjalankan"):
         st.code("""# Install dependensi
 pip install streamlit biopython matplotlib
