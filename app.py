@@ -195,7 +195,7 @@ if run_btn:
             h2 = Entrez.efetch(db="nucleotide", id=id_kadal,  rettype="fasta", retmode="text")
             st.session_state.kadal_record  = SeqIO.read(h2, "fasta"); h2.close()
             st.session_state.data_loaded   = True
-            st.toast("✅ Data berhasil diunduh!", icon="🎉")
+            st.toast("Data berhasil diunduh!", icon="✅")
         except Exception as e:
             st.error(f"❌ Gagal mengunduh: {e}")
             st.session_state.data_loaded = False
