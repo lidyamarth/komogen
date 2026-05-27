@@ -118,6 +118,26 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .section-title { font-size: 1.05rem; font-weight: 600; color: #2e3b7d; margin: 1.2rem 0 0.5rem; }
 .hint { font-size: 0.82rem; color: #888; font-style: italic; margin-bottom: 0.6rem; }
 
+div[role="tablist"] {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+div[role="tablist"] > div[data-baseweb="tab"] {
+    flex: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+div[role="tablist"] button {
+    width: 100% !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
