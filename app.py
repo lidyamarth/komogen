@@ -202,11 +202,11 @@ if run_btn:
 
 # Tabs 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📥 Akuisisi Data",
-    "📊 Analisis Genomik",
-    "🔄 Dogma Sentral",
-    "🔗 Sequence Alignment",
-    "ℹ️ Tentang",
+    "Akuisisi Data",
+    "Analisis Genomik",
+    "Dogma Sentral",
+    "Sequence Alignment",
+    "Tentang",
 ])
 
 with tab1:
