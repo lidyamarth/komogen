@@ -527,9 +527,9 @@ with tab5:
     <h4>👥 Anggota Kelompok</h4>
     <table style="width:100%;font-size:.87rem;border-collapse:collapse;">
       <thead>
-        <tr style="border-bottom:2px solid #c8e6c9;">
-          <th style="text-align:left;padding:6px 8px;color:#1b5e20;">Nama</th>
-          <th style="text-align:left;padding:6px 8px;color:#1b5e20;">NIM</th>
+        <tr style="border-bottom:2px solid #a0b0e0;">
+          <th style="text-align:left;padding:6px 8px;color:#2e3b7d;">Nama</th>
+          <th style="text-align:left;padding:6px 8px;color:#2e3b7d;">NIM</th>
         </tr>
       </thead>
       <tbody>
