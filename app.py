@@ -118,20 +118,6 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .section-title { font-size: 1.05rem; font-weight: 600; color: #2e3b7d; margin: 1.2rem 0 0.5rem; }
 .hint { font-size: 0.82rem; color: #888; font-style: italic; margin-bottom: 0.6rem; }
 
-  div[data-testid="stTabs"] {
-      width: 100%;
-  }
-  div[data-testid="stTabs"] > div:first-child {
-      display: flex;
-      justify-content: space-between;
-  }
-  div[data-testid="stTabs"] button {
-      flex: 1;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 500;
-  }
-
 </style>
 """, unsafe_allow_html=True)
 
