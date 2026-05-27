@@ -210,7 +210,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 ])
 
 with tab1:
-    st.markdown("### 📥 Akuisisi Data Sekuens dari NCBI")
+    st.markdown("### 🔹 Akuisisi Data Sekuens dari NCBI")
 
     c1, c2 = st.columns(2)
     with c1:
@@ -269,7 +269,7 @@ with tab1:
         st.markdown(f'<p class="hint">ID: {lr.description}</p>', unsafe_allow_html=True)
 
 with tab2:
-    st.markdown("### 📊 Analisis Karakteristik Genomik")
+    st.markdown("### 🔹 Analisis Karakteristik Genomik")
 
     if not st.session_state.data_loaded:
         st.info("⚠️ Jalankan analisis terlebih dahulu.")
@@ -361,7 +361,7 @@ with tab2:
 
 
 with tab3:
-    st.markdown("### 🔄 Simulasi Dogma Sentral")
+    st.markdown("### 🔹 Simulasi Dogma Sentral")
 
     if not st.session_state.data_loaded:
         st.info("⚠️ Jalankan analisis terlebih dahulu.")
@@ -431,7 +431,7 @@ with tab3:
             st.warning("⚠️ Tidak ditemukan stop kodon pada fragmen ini — coba perbesar panjang sampel.")
 
 with tab4:
-    st.markdown("### 🔗 Sequence Alignment")
+    st.markdown("### 🔹 Sequence Alignment")
 
     if not st.session_state.data_loaded:
         st.info("⚠️ Jalankan analisis terlebih dahulu.")
@@ -502,7 +502,7 @@ with tab4:
             st.error("**Kemiripan Rendah**: Divergensi evolutif besar. Perlu analisis filogenetik lebih lanjut.")
 
 with tab5:
-    st.markdown("### ℹ️ Tentang Proyek")
+    st.markdown("### 🔹 Tentang Proyek")
     c1, c2 = st.columns(2)
     with c1:
         st.markdown("""
@@ -520,7 +520,7 @@ with tab5:
     with c2:
         st.markdown("""
         <div class="card">
-        <h4>Stack Teknologi</h4>
+        <h4>Tech Stack</h4>
         <p style="font-size:0.87rem;color:#333;">
         🐍 <b>Python 3</b>: Bahasa pemrograman utama<br>
         🧬 <b>Biopython</b>: Entrez, SeqIO, Align, SeqUtils<br>
