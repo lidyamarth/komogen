@@ -174,7 +174,7 @@ with st.sidebar:
         extend_gap = st.number_input("Extend gap",     value=-0.1, step=0.05)
 
     st.markdown("---")
-    run_btn = st.button("Jalankan Analisis", use_container_width=True, color:#2e3b7d, type="primary")
+    run_btn = st.button("Jalankan Analisis", use_container_width=True, type="primary")
     st.markdown('<p style="font-size:0.75rem;color:#aaa;text-align:center;">Data diunduh langsung dari NCBI</p>', unsafe_allow_html=True)
 
 if "data_loaded" not in st.session_state:
