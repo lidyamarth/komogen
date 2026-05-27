@@ -117,6 +117,21 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
 .section-title { font-size: 1.05rem; font-weight: 600; color: #2e3b7d; margin: 1.2rem 0 0.5rem; }
 .hint { font-size: 0.82rem; color: #888; font-style: italic; margin-bottom: 0.6rem; }
+
+  div[data-testid="stTabs"] {
+      width: 100%;
+  }
+  div[data-testid="stTabs"] > div:first-child {
+      display: flex;
+      justify-content: space-between;
+  }
+  div[data-testid="stTabs"] button {
+      flex: 1;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+  }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -126,10 +141,10 @@ st.markdown("""
   <h1>KOMOGEN</h1>
   <div class="sub">Komputasi Komparatif Sekuens DNA & RNA Gen Peptida Antimikroba<br>pada Komodo sebagai Upaya Konservasi Genetik</div>
   <div style="margin-top:1rem;">
-    <span class="badge">🧬 Bioinformatika</span>
-    <span class="badge">📘 IF3211 Komputasi Domain Spesifik</span>
-    <span class="badge">🌿 Konservasi Genetik</span>
-    <span class="badge">🔬 Biopython + Streamlit</span>
+    <span class="badge">Bioinformatika</span>
+    <span class="badge">IF3211 Komputasi Domain Spesifik</span>
+    <span class="badge">Konservasi Genetik</span>
+    <span class="badge">Biopython + Streamlit</span>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -139,7 +154,7 @@ if not BIO_OK:
     st.stop()
 
 with st.sidebar:
-    st.markdown("## ⚙️ Konfigurasi")
+    st.markdown("## Konfigurasi")
 
     with st.expander("📡 NCBI & Accession ID", expanded=True):
         email_ncbi = st.text_input("Email NCBI", value="18223133@std.stei.itb.ac.id",
@@ -159,7 +174,7 @@ with st.sidebar:
         extend_gap = st.number_input("Extend gap",     value=-0.1, step=0.05)
 
     st.markdown("---")
-    run_btn = st.button("🚀 Jalankan Analisis", use_container_width=True, type="primary")
+    run_btn = st.button("Jalankan Analisis", use_container_width=True, color:#2e3b7d, type="primary")
     st.markdown('<p style="font-size:0.75rem;color:#aaa;text-align:center;">Data diunduh langsung dari NCBI</p>', unsafe_allow_html=True)
 
 if "data_loaded" not in st.session_state:
@@ -232,7 +247,7 @@ with tab1:
         kr = st.session_state.komodo_record
         lr = st.session_state.kadal_record
 
-        st.success(f"✅ Data berhasil dimuat — **{kr.id}** dan **{lr.id}**")
+        st.success(f"✅ Data berhasil dimuat: **{kr.id}** dan **{lr.id}**")
 
         ca, cb, cc = st.columns(3)
         ca.markdown(f'<div class="metric-box"><div class="val">{len(kr.seq):,}</div><div class="lbl">Panjang Sekuens Komodo (bp)</div></div>', unsafe_allow_html=True)
