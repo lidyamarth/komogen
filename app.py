@@ -195,7 +195,7 @@ with tab1:
     with c1:
         st.markdown(f"""
         <div class="card">
-        <h4>🦎 Komodo Dragon</h4>
+        <h4>Komodo Dragon</h4>
         <p style="margin:0;font-size:0.85rem;"><em>Varanus komodoensis</em></p>
         <p style="margin:4px 0 0;font-size:0.82rem;color:#555;">
             Accession: <code>{id_komodo}</code><br>
@@ -206,7 +206,7 @@ with tab1:
     with c2:
         st.markdown(f"""
         <div class="card">
-        <h4>🦎 Kadal Pembanding</h4>
+        <h4>Kadal Pembanding</h4>
         <p style="margin:0;font-size:0.85rem;"><em>Anolis carolinensis</em></p>
         <p style="margin:4px 0 0;font-size:0.82rem;color:#555;">
             Accession: <code>{id_kadal}</code><br>
@@ -217,7 +217,7 @@ with tab1:
 
     st.markdown("""
     <div class="card">
-    <h4>🧬 Mengapa Gen Beta-Defensin?</h4>
+    <h4>Mengapa Gen Beta-Defensin?</h4>
     <p style="font-size:0.88rem;margin:0;color:#333;">
     Beta-defensin adalah peptida antimikroba (AMP) yang menjadi komponen utama sistem imun bawaan reptil.
     Pada Komodo, gen ini berperan dalam ketahanan terhadap bakteri patogen di lingkungan liar.
@@ -239,11 +239,11 @@ with tab1:
         cb.markdown(f'<div class="metric-box"><div class="val">{len(lr.seq):,}</div><div class="lbl">Panjang Sekuens Kadal (bp)</div></div>', unsafe_allow_html=True)
         cc.markdown(f'<div class="metric-box"><div class="val">{abs(len(kr.seq)-len(lr.seq)):,}</div><div class="lbl">Selisih Panjang (bp)</div></div>', unsafe_allow_html=True)
 
-        st.markdown('<p class="section-title">🧬 Sekuens Komodo (200 nt pertama)</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Sekuens Komodo (200 nt pertama)</p>', unsafe_allow_html=True)
         st.markdown(f'<div class="seq-box">{str(kr.seq[:200])}</div>', unsafe_allow_html=True)
         st.markdown(f'<p class="hint">ID: {kr.description}</p>', unsafe_allow_html=True)
 
-        st.markdown('<p class="section-title">🧬 Sekuens Kadal Pembanding (200 nt pertama)</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Sekuens Kadal Pembanding (200 nt pertama)</p>', unsafe_allow_html=True)
         st.markdown(f'<div class="seq-box">{str(lr.seq[:200])}</div>', unsafe_allow_html=True)
         st.markdown(f'<p class="hint">ID: {lr.description}</p>', unsafe_allow_html=True)
 
@@ -258,7 +258,7 @@ with tab2:
         gc_k = gc_fraction(kr.seq) * 100
         gc_l = gc_fraction(lr.seq) * 100
 
-        st.markdown('<p class="section-title">🧮 GC Content</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">GC Content</p>', unsafe_allow_html=True)
         ca, cb, cc = st.columns(3)
         ca.markdown(f'<div class="metric-box"><div class="val">{gc_k:.1f}%</div><div class="lbl">GC — Komodo</div></div>', unsafe_allow_html=True)
         cb.markdown(f'<div class="metric-box"><div class="val">{gc_l:.1f}%</div><div class="lbl">GC — Kadal</div></div>', unsafe_allow_html=True)
@@ -283,7 +283,7 @@ with tab2:
         st.pyplot(fig)
         plt.close()
 
-        st.markdown(f'<p class="section-title">🔬 Analisis {k_mer_size}-mer (Top 10)</p>', unsafe_allow_html=True)
+        st.markdown(f'<p class="section-title">Analisis {k_mer_size}-mer (Top 10)</p>', unsafe_allow_html=True)
 
         def hitung_kmer(seq, k):
             s = str(seq)
@@ -311,7 +311,7 @@ with tab2:
         st.pyplot(fig2)
         plt.close()
 
-        st.markdown('<p class="section-title">🧩 Komposisi Basa Nitrogen</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Komposisi Basa Nitrogen</p>', unsafe_allow_html=True)
 
         def base_comp(seq):
             s = str(seq).upper()
@@ -349,7 +349,7 @@ with tab3:
 
         st.markdown("""
         <div class="card">
-        <h4>📖 Alur Informasi Genetik</h4>
+        <h4>Alur Informasi Genetik</h4>
         <p style="font-size:0.87rem;margin:0;color:#333;">
         Dogma sentral biologi molekuler menggambarkan alur informasi genetik:
         <strong>DNA → mRNA (Transkripsi)</strong> → <strong>Protein (Translasi)</strong>.
@@ -420,7 +420,7 @@ with tab4:
 
         st.markdown("""
         <div class="card">
-        <h4>🔍 Pairwise Global Alignment (Needleman-Wunsch)</h4>
+        <h4>Pairwise Global Alignment (Needleman-Wunsch)</h4>
         <p style="font-size:0.87rem;margin:0;color:#333;">
         Alignment global membandingkan sekuens dari ujung ke ujung menggunakan algoritma
         <strong>Needleman-Wunsch</strong> dengan penalti gap affine.
@@ -446,7 +446,7 @@ with tab4:
         cb.markdown(f'<div class="metric-box"><div class="val">{persen:.1f}%</div><div class="lbl">Persen Kemiripan</div></div>', unsafe_allow_html=True)
         cc.markdown(f'<div class="metric-box"><div class="val">{align_len}</div><div class="lbl">Panjang Sekuens (nt)</div></div>', unsafe_allow_html=True)
 
-        st.markdown('<p class="section-title">📈 Tingkat Kemiripan</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Tingkat Kemiripan</p>', unsafe_allow_html=True)
         bar_color = "#2e3b7d" if persen >= 60 else ("#EED682" if persen >= 40 else "#FF716E")
         fig, ax = plt.subplots(figsize=(8, 1.4))
         ax.barh([""], [100], color="#eef1fb", height=0.5, edgecolor="#d0d8f0", linewidth=1)
@@ -461,7 +461,7 @@ with tab4:
         fig.tight_layout()
         st.pyplot(fig); plt.close()
 
-        st.markdown('<p class="section-title">📋 Alignment Terbaik (preview)</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Alignment Terbaik (preview)</p>', unsafe_allow_html=True)
         try:
             alignments = aligner.align(seq_a, seq_b)
             best = next(iter(alignments))
@@ -472,13 +472,13 @@ with tab4:
         except Exception as e:
             st.warning(f"Tidak dapat menampilkan preview alignment: {e}")
 
-        st.markdown('<p class="section-title">💡 Interpretasi Biologis</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-title">Interpretasi Biologis</p>', unsafe_allow_html=True)
         if persen >= 70:
-            st.success("🟢 **Kemiripan Tinggi** — Homologi signifikan menandakan konservasi evolutif kuat pada gen beta-defensin kedua spesies reptil ini.")
+            st.success("**Kemiripan Tinggi**: Homologi signifikan menandakan konservasi evolutif kuat pada gen beta-defensin kedua spesies reptil ini.")
         elif persen >= 40:
-            st.warning("🟡 **Kemiripan Sedang** — Kesamaan parsial menunjukkan hubungan evolutif dengan divergensi pada beberapa region sekuens.")
+            st.warning("**Kemiripan Sedang**: Kesamaan parsial menunjukkan hubungan evolutif dengan divergensi pada beberapa region sekuens.")
         else:
-            st.error("🔴 **Kemiripan Rendah** — Divergensi evolutif besar. Perlu analisis filogenetik lebih lanjut.")
+            st.error("**Kemiripan Rendah**: Divergensi evolutif besar. Perlu analisis filogenetik lebih lanjut.")
 
 with tab5:
     st.markdown("### ℹ️ Tentang Proyek")
@@ -486,7 +486,7 @@ with tab5:
     with c1:
         st.markdown("""
         <div class="card">
-        <h4>📋 Informasi Proyek</h4>
+        <h4>Informasi Proyek</h4>
         <p style="font-size:0.87rem;color:#333;">
         <b>Mata Kuliah:</b> IF3211 Komputasi Domain Spesifik<br>
         <b>Topik:</b> Sekuens DNA &amp; RNA<br>
@@ -499,19 +499,19 @@ with tab5:
     with c2:
         st.markdown("""
         <div class="card">
-        <h4>🔧 Stack Teknologi</h4>
+        <h4>Stack Teknologi</h4>
         <p style="font-size:0.87rem;color:#333;">
-        🐍 <b>Python 3</b> — Bahasa pemrograman utama<br>
-        🧬 <b>Biopython</b> — Entrez, SeqIO, Align, SeqUtils<br>
-        📊 <b>Matplotlib</b> — Visualisasi data<br>
-        🌐 <b>Streamlit</b> — Antarmuka web interaktif<br>
-        🗄️ <b>NCBI Entrez API</b> — Sumber data sekuens
+        🐍 <b>Python 3</b>: Bahasa pemrograman utama<br>
+        🧬 <b>Biopython</b>: Entrez, SeqIO, Align, SeqUtils<br>
+        📊 <b>Matplotlib</b>: Visualisasi data<br>
+        🌐 <b>Streamlit</b>: Antarmuka web interaktif<br>
+        🗄️ <b>NCBI Entrez API</b>: Sumber data sekuens
         </p>
         </div>""", unsafe_allow_html=True)
 
     st.markdown("""
     <div class="card">
-    <h4>🦎 Latar Belakang Ilmiah</h4>
+    <h4>Latar Belakang Ilmiah</h4>
     <p style="font-size:0.87rem;color:#333;line-height:1.7;">
     Komodo (<em>Varanus komodoensis</em>) adalah kadal terbesar di dunia dan merupakan spesies
     terancam punah (<b>Vulnerable</b>, IUCN). Gen beta-defensin pada Komodo mengkode peptida
@@ -524,7 +524,7 @@ with tab5:
 
     st.markdown("""
     <div class="card">
-    <h4>👥 Anggota Kelompok</h4>
+    <h4>Anggota Kelompok</h4>
     <table style="width:100%;font-size:.87rem;border-collapse:collapse;">
       <thead>
         <tr style="border-bottom:2px solid #a0b0e0;">
@@ -541,7 +541,7 @@ with tab5:
     </table>
     </div>""", unsafe_allow_html=True)
     
-    with st.expander("📦 Cara Menjalankan"):
+    with st.expander("How to Run"):
         st.code("""# Install dependensi
 pip install streamlit biopython matplotlib
 
