@@ -145,7 +145,7 @@ st.markdown("""
 <div class="hero">
   <div style="font-size:3.2rem; margin-bottom:0.2rem;">🦎</div>
   <h1>KOMOGEN</h1>
-  <div class="sub">Komputasi Komparatif Karakteristik Nukleotida dan Analisis Alignment Sekuens Genom Komodo<br>(Varanus komodoensis) sebagai Indikator Konservasi Genetik</div>
+  <div class="sub">Komputasi Komparatif Karakteristik Nukleotida dan Analisis Alignment Sekuens Genom Komodo (Varanus komodoensis) sebagai Indikator Konservasi Genetik</div>
   <div style="margin-top:1rem;">
     <span class="badge">Bioinformatika</span>
     <span class="badge">IF3211 Komputasi Domain Spesifik</span>
